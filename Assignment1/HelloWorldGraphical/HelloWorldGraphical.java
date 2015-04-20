@@ -19,39 +19,35 @@ public class HelloWorldGraphical extends JFrame implements ActionListener{
 	JButton francaisButton;
 	JButton quitButton;
 
-	//constructor for UI-App
 	public HelloWorldGraphical()
 	{
 		//generating the frame and panel
 		this.setTitle("Hello GUI");
 		this.setSize(400,400);
-		
+		JPanel languageSelectionPanel = new JPanel();
+		languageSelectionPanel.setLayout(new BoxLayout(languageSelectionPanel, BoxLayout.PAGE_AXIS));
 
-		JPanel panel = new JPanel();
-		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-
-		//generating the buttons
-		deutschButton = new JButton("Deutsch");
-		deutschButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-		panel.add(Box.createRigidArea(new Dimension(0, 30)));
-		panel.add(deutschButton);
+		germanButton = new JButton("Deutsch");
+		germanButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+		languageSelectionPanel.add(Box.createRigidArea(new Dimension(0, 30)));
+		languageSelectionPanel.add(germanButton);
 
 		englishButton = new JButton("English");
 		englishButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-		panel.add(Box.createRigidArea(new Dimension(0, 30)));
-		panel.add(englishButton);
+		languageSelectionPanel.add(Box.createRigidArea(new Dimension(0, 30)));
+		languageSelectionPanel.add(englishButton);
 
-		francaisButton = new JButton("Francais");
-		francaisButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-		panel.add(Box.createRigidArea(new Dimension(0, 30)));
-		panel.add(francaisButton);
+		frenchButton = new JButton("Francais");
+		frenchButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+		languageSelectionPanel.add(Box.createRigidArea(new Dimension(0, 30)));
+		languageSelectionPanel.add(frenchButton);
 
-		JPanel panel2 = new JPanel();
-		panel2.setLayout(new BoxLayout(panel2, BoxLayout.LINE_AXIS));
-		label = new JLabel("XXXXXXXXX");
-		label.setAlignmentX(Component.LEFT_ALIGNMENT);
-		panel2.add(Box.createRigidArea(new Dimension(40, 0)));
-		panel2.add(label);
+		JPanel greetingPanel = new JPanel();
+		greetingPanel.setLayout(new BoxLayout(greetingPanel, BoxLayout.LINE_AXIS));
+		greetingLabel = new JLabel("XXXXXXXXX");
+		greetingLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		greetingPanel.add(Box.createRigidArea(new Dimension(40, 0)));
+		greetingPanel.add(greetingLabel);
 		
 		JPanel panel3 = new JPanel();
 		panel3.setLayout(new BoxLayout(panel3, BoxLayout.PAGE_AXIS));
@@ -68,7 +64,7 @@ public class HelloWorldGraphical extends JFrame implements ActionListener{
 		
 		//adding panel to frame
 		this.add(panel, BorderLayout.NORTH);
-		this.add(panel2, BorderLayout.CENTER);
+		this.add(greetingPanel, BorderLayout.CENTER);
 		this.add(panel3, BorderLayout.PAGE_END);
 	}
 
