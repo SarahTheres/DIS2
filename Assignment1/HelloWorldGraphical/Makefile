@@ -3,3 +3,6 @@ all:
 
 run:
 	java HelloWorldGraphical
+
+clean:
+	rm *.class
