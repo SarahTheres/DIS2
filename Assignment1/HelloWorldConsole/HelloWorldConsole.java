@@ -35,7 +35,7 @@ public class HelloWorldConsole {
 					System.out.println("Hello!\n");
 					break;
 				case 'f':
-					System.out.println("Franzoesisch...\n");
+					System.out.println("Bonjour!\n");
 					break;
 				case 'q': 
 					doQuit = true;
